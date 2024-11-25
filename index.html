@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Estacionamento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Gerenciamento de Estacionamento</h1>
+      <p>Simplifique o controle de entrada, saída e cobrança de veículos.</p>
+    </header>
+
+    <main>
+      <section class="form-section">
+        <h2>Registrar Entrada</h2>
+        <form id="form-entrada" class="form">
+          <label for="placa-entrada">Placa do Veículo</label>
+          <input type="text" id="placa-entrada" placeholder="Ex: ABC1D23" required>
+      
+          <label for="hora-entrada">Hora de Entrada</label>
+          <input type="time" id="hora-entrada" required>
+      
+          <button type="submit" class="btn">Registrar Entrada</button>
+        </form>
+      </section>
+      
+      <section class="form-section">
+        <h2>Registrar Saída</h2>
+        <form id="form-saida" class="form">
+          <label for="placa-saida">Placa do Veículo</label>
+          <input type="text" id="placa-saida" placeholder="Ex: ABC1D23" required>
+      
+          <label for="hora-saida">Hora de Saída</label>
+          <input type="time" id="hora-saida" required>
+      
+          <button type="submit" class="btn">Registrar Saída</button>
+        </form>
+      </section>
+
+
+      <section id="ticket" class="ticket-section hidden">
+        <h2>Detalhes do Ticket</h2>
+        <div class="ticket-info">
+          <p id="ticket-estado"></p>
+          <p id="ticket-tempo"></p>
+          <p id="ticket-valor"></p>
+          <p id="ticket-horarios"></p>
+        </div>
+      </section>
+
+      <section class="parking-grid">
+        <h2>Ocupação Atual do Estacionamento</h2>
+        <div id="grid-container" class="grid"></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
